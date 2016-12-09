@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CustomUploadButton_Example' do
+  pod 'CustomUploadButton', :path => '../'
+
+  target 'CustomUploadButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
