@@ -1,0 +1,6 @@
+framework module CustomUploadButton {
+  umbrella header "CustomUploadButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

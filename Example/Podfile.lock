@@ -1,0 +1,16 @@
+PODS:
+  - CustomUploadButton (0.1.0)
+
+DEPENDENCIES:
+  - CustomUploadButton (from `../`)
+
+EXTERNAL SOURCES:
+  CustomUploadButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CustomUploadButton: ad02d0de2dda40611f2b703becf24bfc1bf3d9b1
+
+PODFILE CHECKSUM: b6517a026f34d725ae797863a08452647d267e06
+
+COCOAPODS: 1.1.1

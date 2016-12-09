@@ -28,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05201B4A879ADDCEB171F377 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		0B68F57A3EA17BE4B148E4BE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		05201B4A879ADDCEB171F377 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0B68F57A3EA17BE4B148E4BE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		13A21D829AB052F7DBB0348F /* Pods-CustomUploadButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomUploadButton_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomUploadButton_Example/Pods-CustomUploadButton_Example.release.xcconfig"; sourceTree = "<group>"; };
 		44E37D39FE43684F432E9495 /* Pods-CustomUploadButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomUploadButton_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomUploadButton_Example/Pods-CustomUploadButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CustomUploadButton_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomUploadButton_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +43,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7E0FB5D1497CDF8DBC45F5F0 /* Pods_CustomUploadButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomUploadButton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B13925B350E811578976681 /* CustomUploadButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CustomUploadButton.podspec; path = ../CustomUploadButton.podspec; sourceTree = "<group>"; };
+		8B13925B350E811578976681 /* CustomUploadButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CustomUploadButton.podspec; path = ../CustomUploadButton.podspec; sourceTree = "<group>"; };
 		A088BA01E88A7D4F3AABA9F0 /* Pods-CustomUploadButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomUploadButton_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomUploadButton_Tests/Pods-CustomUploadButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCF0897989F2A5E647BA4CE9 /* Pods_CustomUploadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomUploadButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0451C1FA1FF11A46B0DF5A /* Pods-CustomUploadButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomUploadButton_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomUploadButton_Tests/Pods-CustomUploadButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,9 +215,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0810;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -494,6 +496,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -507,6 +510,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -526,6 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -541,6 +546,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
