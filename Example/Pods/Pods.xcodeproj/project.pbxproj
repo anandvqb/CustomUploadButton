@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		002ADB656393C689CE5D411522512F5E /* Pods-CustomUploadButton_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 429030BF848730A206C49973BDFCA280 /* Pods-CustomUploadButton_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D647CA743A9A5596395576F14A0A7CA /* Pods-CustomUploadButton_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 607E4B42401B0DA9B121302C03306FF3 /* Pods-CustomUploadButton_Tests-dummy.m */; };
+		3D85B5E81DFFC5D00051DE89 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D85B5E71DFFC5D00051DE89 /* CircleView.swift */; };
 		53EB0EF8B57C7CBB62B529F545B65C42 /* Pods-CustomUploadButton_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0AAA39FEC4F8675B489A63512342229 /* Pods-CustomUploadButton_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54FB11E1215AA701E85C215BB7058FB2 /* Pods-CustomUploadButton_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 747DE5F3A45C38D7303EE01B59A4DE3E /* Pods-CustomUploadButton_Example-dummy.m */; };
 		853EC818FDF4114E84124AC567BF2733 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -35,33 +36,34 @@
 		2AEC137E9AC0E75EAD42BC52DD55F9CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B80270598729C77588BDB81475DCA8E /* Pods-CustomUploadButton_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2DC7DCAF8D4D3CD6D902E1E6CF7372D0 /* Pods-CustomUploadButton_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomUploadButton_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3420BDB7D0A0A3B5BC64AEF2D80FAF2E /* Pods-CustomUploadButton_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CustomUploadButton_Tests.modulemap"; sourceTree = "<group>"; };
+		3420BDB7D0A0A3B5BC64AEF2D80FAF2E /* Pods-CustomUploadButton_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CustomUploadButton_Tests.modulemap"; sourceTree = "<group>"; };
 		3A570C5A93B00582355AD2970959F49C /* CustomUploadButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomUploadButton-dummy.m"; sourceTree = "<group>"; };
 		3B695ADCEC5D0FB643254DAEECC1A49B /* Pods-CustomUploadButton_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomUploadButton_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3BBC961641789DA0A4FBF03DFF4209D7 /* Pods-CustomUploadButton_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Tests-resources.sh"; sourceTree = "<group>"; };
+		3D85B5E71DFFC5D00051DE89 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		429030BF848730A206C49973BDFCA280 /* Pods-CustomUploadButton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomUploadButton_Example-umbrella.h"; sourceTree = "<group>"; };
 		528F7B5E89A468C7DB675E8F88FA398D /* Pods-CustomUploadButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomUploadButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		56F5E4DB9EE63B152E6900F995147660 /* Pods-CustomUploadButton_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomUploadButton_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5771EA8BD2755760BF34EF2BE465A1F4 /* CustomUploadButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CustomUploadButton.framework; path = CustomUploadButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5771EA8BD2755760BF34EF2BE465A1F4 /* CustomUploadButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomUploadButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607E4B42401B0DA9B121302C03306FF3 /* Pods-CustomUploadButton_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomUploadButton_Tests-dummy.m"; sourceTree = "<group>"; };
 		747DE5F3A45C38D7303EE01B59A4DE3E /* Pods-CustomUploadButton_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomUploadButton_Example-dummy.m"; sourceTree = "<group>"; };
 		86C1EBAE74BFB21CCB9F443221C288E1 /* Pods-CustomUploadButton_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		884BC8C7E668C5BAEF80CC07916A6012 /* Pods-CustomUploadButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomUploadButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93314C9369A44326730D6DCDB993CF1C /* Pods-CustomUploadButton_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Example-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		975335215D1D3C6964AAD6B59C498B00 /* Pods_CustomUploadButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomUploadButton_Example.framework; path = "Pods-CustomUploadButton_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		975335215D1D3C6964AAD6B59C498B00 /* Pods_CustomUploadButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomUploadButton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		981689E18DE8F2D6D71BC7F8523D7A52 /* CustomUploadButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomUploadButton.swift; sourceTree = "<group>"; };
 		9DD3E585190ED368B77E66163E67479B /* Pods-CustomUploadButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomUploadButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACD306025B7040EC7C28535385E9FBA0 /* CustomUploadButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomUploadButton-prefix.pch"; sourceTree = "<group>"; };
 		B6009A9673E76081159B07327E07BAC1 /* CustomUploadButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomUploadButton.xcconfig; sourceTree = "<group>"; };
-		C17638492D7C89092AD83534A13C3E7E /* Pods_CustomUploadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomUploadButton_Tests.framework; path = "Pods-CustomUploadButton_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17638492D7C89092AD83534A13C3E7E /* Pods_CustomUploadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomUploadButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61BC86EF1BE47230917405B65FFC7A1 /* CustomUploadButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomUploadButton-umbrella.h"; sourceTree = "<group>"; };
-		C8A8063487390408CC7FF01DD01656D8 /* CustomUploadButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CustomUploadButton.modulemap; sourceTree = "<group>"; };
+		C8A8063487390408CC7FF01DD01656D8 /* CustomUploadButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CustomUploadButton.modulemap; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CCD4C6EC042F078704B3569E01F6E3A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5BA6ED43D107B40CB6CBC61A3C4F828 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0AAA39FEC4F8675B489A63512342229 /* Pods-CustomUploadButton_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomUploadButton_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F629B48ED3147D841314B5A245930517 /* Pods-CustomUploadButton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CustomUploadButton_Example.modulemap"; sourceTree = "<group>"; };
+		F629B48ED3147D841314B5A245930517 /* Pods-CustomUploadButton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CustomUploadButton_Example.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +99,6 @@
 			children = (
 				16F6FBAC9874071020B0E34C79EC8A22 /* Classes */,
 			);
-			name = CustomUploadButton;
 			path = CustomUploadButton;
 			sourceTree = "<group>";
 		};
@@ -115,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				981689E18DE8F2D6D71BC7F8523D7A52 /* CustomUploadButton.swift */,
+				3D85B5E71DFFC5D00051DE89 /* CircleView.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -347,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D85B5E81DFFC5D00051DE89 /* CircleView.swift in Sources */,
 				A876B7DD605C406BE37090D5EF83942A /* CustomUploadButton-dummy.m in Sources */,
 				DB85B5B2F4425E951E43A983F712260D /* CustomUploadButton.swift in Sources */,
 			);

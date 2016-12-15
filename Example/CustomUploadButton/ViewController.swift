@@ -12,7 +12,7 @@ import CustomUploadButton
 class ViewController: UIViewController {
     
     let buttonWidth:CGFloat = 300
-    let buttonHeight:CGFloat = 50
+    let buttonHeight:CGFloat = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
