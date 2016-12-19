@@ -11,7 +11,7 @@ import CustomUploadButton
 
 class ViewController: UIViewController {
     
-    let buttonWidth:CGFloat = 300
+    let buttonWidth:CGFloat = 100
     let buttonHeight:CGFloat = 60
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         let customUploadButton = CustomUploadButton(frame: CGRect(x:(viewFrame.width - buttonWidth)/2, y:(viewFrame.height - buttonHeight)/2, width:buttonWidth, height:buttonHeight))
         
-        customUploadButton.setUpButton(title: "Custom Upload Button")
+        customUploadButton.setUpButton(title: "Upload")
         
         view.addSubview(customUploadButton)
     }
