@@ -8,7 +8,13 @@
 
 import Foundation
 
-public class CustomUploadButton : UIButton {
+public protocol CustomUploadButtonActionDelegate: class {
+    func buttonAction()
+}
+
+public class CustomUploadButton : UIView {
+    
+    public var delegate: CustomUploadButtonActionDelegate?
     
     let bgColor = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 1.0)
     let bgColorWithAlpha = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 0.1)
@@ -16,7 +22,8 @@ public class CustomUploadButton : UIButton {
     
     var angle = CGFloat(M_PI_4)
     
-    var baseRectangleView: UIView!
+    var titleLabel: UILabel!
+    var baseRectangleView: UIControl!
     var baseCircleView: UIView!
     var outerCircleView: UIView!
     var innerCircleView: UIView!
@@ -27,23 +34,28 @@ public class CustomUploadButton : UIButton {
     var breakLoop = false
     
     public func setUpButton(title:String) {
-        self.backgroundColor = bgColor
         
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        self.setTitleColor(UIColor.white, for: .normal)
-        self.setTitle(title, for: .normal)
+        baseRectangleView = UIControl(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
+        baseRectangleView.backgroundColor = bgColor
         
-        self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
+        titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
+        titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        titleLabel.textColor = UIColor.white
+        titleLabel.text = title
+        titleLabel.textAlignment = .center
+        baseRectangleView.addSubview(titleLabel)
+        
+        baseRectangleView.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
+        self.addSubview(baseRectangleView)
     }
     
     func buttonTouched() {
         let buttonFrame = self.frame
         
         self.backgroundColor = UIColor.clear
-        self.setTitleColor(UIColor.clear, for: .normal)
-        self.removeTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
+        self.titleLabel.textColor = UIColor.clear
+        self.baseRectangleView.removeTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
         
-        baseRectangleView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
         baseCircleView = UIView(frame: CGRect(x: (buttonFrame.width - 55)/2, y: 5, width: 55, height: 55))
         outerCircleView = CircleView(frame: CGRect(x: (buttonFrame.width - 45)/2, y: 10, width: 45, height: 45))
         innerCircleView = CircleView(frame: CGRect(x: (buttonFrame.width - 30)/2, y: 17.5, width: 30, height: 30))
@@ -72,9 +84,9 @@ public class CustomUploadButton : UIButton {
         successCircleView.clipsToBounds = true
         successCircleView.backgroundColor = bgColorForSuccessView
         
-        self.addSubview(baseRectangleView)
-        
         self.animateRectangle()
+        
+        self.delegate?.buttonAction()
     }
     
     func animateRectangle() {

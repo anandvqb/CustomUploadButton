@@ -9,7 +9,7 @@
 import UIKit
 import CustomUploadButton
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CustomUploadButtonActionDelegate {
     
     let buttonWidth:CGFloat = 100
     let buttonHeight:CGFloat = 60
@@ -20,10 +20,14 @@ class ViewController: UIViewController {
         let viewFrame = view.frame
         
         let customUploadButton = CustomUploadButton(frame: CGRect(x:(viewFrame.width - buttonWidth)/2, y:(viewFrame.height - buttonHeight)/2, width:buttonWidth, height:buttonHeight))
-        
+        customUploadButton.delegate = self
         customUploadButton.setUpButton(title: "Upload")
         
         view.addSubview(customUploadButton)
+    }
+    
+    public func buttonAction() {
+        //Do stuff on button action here
     }
     
     override func didReceiveMemoryWarning() {
