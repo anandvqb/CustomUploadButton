@@ -13,13 +13,14 @@ class ViewController: UIViewController, CustomUploadButtonActionDelegate {
     
     let buttonWidth:CGFloat = 100
     let buttonHeight:CGFloat = 60
+    var customUploadButton: CustomUploadButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let viewFrame = view.frame
         
-        let customUploadButton = CustomUploadButton(frame: CGRect(x:(viewFrame.width - buttonWidth)/2, y:(viewFrame.height - buttonHeight)/2, width:buttonWidth, height:buttonHeight))
+        customUploadButton = CustomUploadButton(frame: CGRect(x:(viewFrame.width - buttonWidth)/2, y:(viewFrame.height - buttonHeight)/2, width:buttonWidth, height:buttonHeight))
         customUploadButton.delegate = self
         customUploadButton.setUpButton(title: "Upload")
         
@@ -28,6 +29,9 @@ class ViewController: UIViewController, CustomUploadButtonActionDelegate {
     
     public func buttonAction() {
         //Do stuff on button action here
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.customUploadButton.stopAnimation()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,4 +40,3 @@ class ViewController: UIViewController, CustomUploadButtonActionDelegate {
     }
 
 }
-

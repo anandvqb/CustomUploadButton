@@ -34,9 +34,10 @@ public class CustomUploadButton : UIView {
     var breakLoop = false
     
     public func setUpButton(title:String) {
-        
         baseRectangleView = UIControl(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
         baseRectangleView.backgroundColor = bgColor
+        baseRectangleView.layer.cornerRadius = 25.0
+        baseRectangleView.clipsToBounds = true
         
         titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
         titleLabel?.font = UIFont.systemFont(ofSize: 20)
@@ -52,7 +53,6 @@ public class CustomUploadButton : UIView {
     func buttonTouched() {
         let buttonFrame = self.frame
         
-        self.backgroundColor = UIColor.clear
         self.titleLabel.textColor = UIColor.clear
         self.baseRectangleView.removeTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
         
@@ -67,10 +67,6 @@ public class CustomUploadButton : UIView {
         
         checkmarkImageView = UIImageView(image: checkmarkImage)
         checkmarkImageView.center = self.center
-        
-        baseRectangleView.layer.cornerRadius = 25.0
-        baseRectangleView.clipsToBounds = true
-        baseRectangleView.backgroundColor = bgColor
         
         baseCircleView.layer.cornerRadius = baseCircleView.frame.size.width/2
         baseCircleView.clipsToBounds = true
@@ -92,14 +88,19 @@ public class CustomUploadButton : UIView {
     func animateRectangle() {
         let buttonFrame = self.frame
         
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
-            self.baseRectangleView.transform = CGAffineTransform(scaleX: 0.1, y: 1.0)
-        }, completion: { (value: Bool) in
-            self.baseRectangleView.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.addSubview(self.baseCircleView)
             self.addSubview(self.outerCircleView)
             self.addSubview(self.innerCircleView)
+            
+            self.breakLoop = false
             self.rotateCircle()
+        }
+        
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
+            self.baseRectangleView.transform = CGAffineTransform(scaleX: 0.6, y: 1.0)
+        }, completion: { (value: Bool) in
+            self.baseRectangleView.isHidden = true
         })
     }
     
@@ -115,19 +116,39 @@ public class CustomUploadButton : UIView {
                 }
                 
                 self.addSubview(self.animatingCircleView)
-                UIView.animate(withDuration: 0.4, animations: { () -> Void in
+                UIView.animate(withDuration: 0.2, animations: { () -> Void in
                     self.animatingCircleView.transform = CGAffineTransform(scaleX: 5, y: 5)
                 }) { (finished) -> Void in
                     self.animatingCircleView.removeFromSuperview()
                     self.addSubview(self.successCircleView)
                     self.addSubview(self.checkmarkImageView)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        let subViews = self.subviews
+                        for subview in subViews {
+                            subview.removeFromSuperview()
+                        }
+                        
+                        self.baseRectangleView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                        self.baseRectangleView.isHidden = false
+                        self.titleLabel.textColor = UIColor.white
+                        self.addSubview(self.baseRectangleView)
+                        self.baseRectangleView.addTarget(self, action: #selector(self.buttonTouched), for: .touchUpInside)
+                        
+                        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
+                            self.baseRectangleView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        })
+                    }
                 }
             }
             else {
                 self.angle += CGFloat(M_PI_4)
                 self.rotateCircle()
-                self.breakLoop = true
             }
         })
+    }
+    
+    public func stopAnimation() {
+        self.breakLoop = true
     }
 }
