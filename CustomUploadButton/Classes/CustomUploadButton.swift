@@ -18,6 +18,8 @@ private struct Constants {
     static let bgColor = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 1.0)
     static let bgColorWithAlpha = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 0.1)
     static let bgColorForSuccessView = UIColor(red: 102/255.0, green: 158/255.0, blue: 99/255.0, alpha: 1.0)
+    static let uploadImageName = String("upload")
+    static let checkmarkImageName = String("check")
 }
 
 public class CustomUploadButton : UIView {
@@ -27,13 +29,17 @@ public class CustomUploadButton : UIView {
     var angle = CGFloat(M_PI_4)
     
     var titleLabel: UILabel!
+    var uploadImageView: UIImageView!
     var baseRectangleView: UIControl!
+    
     var baseCircleView: UIView!
     var outerCircleView: UIView!
     var innerCircleView: UIView!
     var expandingCircleView: UIView!
     var successCircleView: UIView!
     var checkmarkImageView: UIImageView!
+    
+    var baseCircleDimension: CGFloat!
     
     var breakLoop = false
     
@@ -50,42 +56,59 @@ public class CustomUploadButton : UIView {
     }
     
     public func setUpButton() {
-        baseRectangleView = UIControl(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
+        baseRectangleView = UIControl(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         baseRectangleView.backgroundColor = Constants.bgColor
-        baseRectangleView.layer.cornerRadius = 25.0
+        baseRectangleView.layer.cornerRadius = self.frame.height/3
         baseRectangleView.clipsToBounds = true
         
-        titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
+        titleLabel = UILabel(frame: CGRect(x: 20, y: 0, width: (self.frame.width - 40), height: self.frame.height))
         titleLabel?.font = UIFont.systemFont(ofSize: 20)
         titleLabel.textColor = UIColor.white
         titleLabel.text = Constants.title
-        titleLabel.textAlignment = .center
+        titleLabel.textAlignment = .left
         baseRectangleView.addSubview(titleLabel)
+        
+        var uploadImage = UIImage()
+        let podBundle = Bundle(for: CustomUploadButton.self)
+        
+        if let url = podBundle.url(forResource: "CustomUploadButton", withExtension: "bundle"){
+            let submitButtonResoursesBundle = Bundle(url: url)
+            uploadImage = UIImage(named: Constants.uploadImageName!, in: submitButtonResoursesBundle, compatibleWith: nil)!
+        }
+        
+        uploadImageView = UIImageView(image: uploadImage)
+        uploadImageView.frame.origin = CGPoint(x: (self.frame.width - uploadImageView.frame.size.width - 20), y: (self.frame.height - uploadImageView.frame.size.height)/2)
+        baseRectangleView.addSubview(uploadImageView)
         
         baseRectangleView.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
         self.addSubview(baseRectangleView)
+        
+        baseCircleDimension = self.frame.height
     }
     
     func buttonTouched() {
-        let buttonFrame = self.frame
+        var circleDimension: CGFloat = baseCircleDimension
         
         self.titleLabel.textColor = UIColor.clear
         self.baseRectangleView.removeTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
         
-        baseCircleView = UIView(frame: CGRect(x: (buttonFrame.width - 55)/2, y: 5, width: 55, height: 55))
-        outerCircleView = CircleView(frame: CGRect(x: (buttonFrame.width - 45)/2, y: 10, width: 45, height: 45))
-        innerCircleView = CircleView(frame: CGRect(x: (buttonFrame.width - 30)/2, y: 17.5, width: 30, height: 30))
-        animatingCircleView = UIView(frame: CGRect(x: (buttonFrame.width - 10)/2, y: 27.5, width: 10, height: 10))
-        successCircleView = UIView(frame: CGRect(x: (buttonFrame.width - 30)/2, y: 17.5, width: 30, height: 30))
+        baseCircleView = UIView(frame: CGRect(x: (self.frame.width - baseCircleDimension)/2, y: 0, width: baseCircleDimension, height: baseCircleDimension))
         
-        let image = UIImage(named: "check")
+        circleDimension -= 5
+        outerCircleView = CircleView(frame: CGRect(x: (self.frame.width - circleDimension)/2, y: 2.5, width: circleDimension, height: circleDimension))
+        
+        circleDimension -= 10
+        innerCircleView = CircleView(frame: CGRect(x: (self.frame.width - circleDimension)/2, y: 7.5, width: circleDimension, height: circleDimension))
+        
+        expandingCircleView = UIView(frame: CGRect(x: (self.frame.width - 10)/2, y: 15, width: 10, height: 10))
+        successCircleView = UIView(frame: CGRect(x: (self.frame.width - 30)/2, y: 5, width: 30, height: 30))
         
         var checkmarkImage = UIImage()
         let podBundle = Bundle(for: CustomUploadButton.self)
         
         if let url = podBundle.url(forResource: "CustomUploadButton", withExtension: "bundle"){
             let submitButtonResoursesBundle = Bundle(url: url)
-            checkmarkImage = UIImage(named: "check", in: submitButtonResoursesBundle, compatibleWith: nil)!
+            checkmarkImage = UIImage(named: Constants.checkmarkImageName!, in: submitButtonResoursesBundle, compatibleWith: nil)!
         }
         
         checkmarkImageView = UIImageView(image: checkmarkImage)
@@ -121,7 +144,7 @@ public class CustomUploadButton : UIView {
         }
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
-            self.baseRectangleView.transform = CGAffineTransform(scaleX: 0.6, y: 1.0)
+            self.baseRectangleView.transform = CGAffineTransform(scaleX: 0.3, y: 1.0)
         }, completion: { (value: Bool) in
             self.baseRectangleView.isHidden = true
         })
