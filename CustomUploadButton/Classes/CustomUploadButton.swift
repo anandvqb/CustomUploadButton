@@ -62,11 +62,18 @@ public class CustomUploadButton : UIView {
         animatingCircleView = UIView(frame: CGRect(x: (buttonFrame.width - 10)/2, y: 27.5, width: 10, height: 10))
         successCircleView = UIView(frame: CGRect(x: (buttonFrame.width - 30)/2, y: 17.5, width: 30, height: 30))
         
-        let bundle = Bundle(for: CustomUploadButton.self)
-        let checkmarkImage = UIImage(named: "check", in: bundle, compatibleWith: nil)
+        let image = UIImage(named: "check")
+        
+        var checkmarkImage = UIImage()
+        let podBundle = Bundle(for: CustomUploadButton.self)
+        
+        if let url = podBundle.url(forResource: "CustomUploadButton", withExtension: "bundle"){
+            let submitButtonResoursesBundle = Bundle(url: url)
+            checkmarkImage = UIImage(named: "check", in: submitButtonResoursesBundle, compatibleWith: nil)!
+        }
         
         checkmarkImageView = UIImageView(image: checkmarkImage)
-        checkmarkImageView.center = self.center
+        checkmarkImageView.center = successCircleView.center
         
         baseCircleView.layer.cornerRadius = baseCircleView.frame.size.width/2
         baseCircleView.clipsToBounds = true

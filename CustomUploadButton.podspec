@@ -31,10 +31,10 @@ This is a cocoapod for creating a custom upload button based on a design from UI
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'CustomUploadButton/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'CustomUploadButton' => ['CustomUploadButton/Assets/*.png']
-  # }
+
+  s.resource_bundles = {
+     'CustomUploadButton' => ['CustomUploadButton/Assets/**/*']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

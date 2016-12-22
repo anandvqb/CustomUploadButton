@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "CustomUploadButton/Classes/**/*"
+  "source_files": "CustomUploadButton/Classes/**/*",
+  "resource_bundles": {
+    "CustomUploadButton": [
+      "CustomUploadButton/Assets/**/*"
+    ]
+  }
 }

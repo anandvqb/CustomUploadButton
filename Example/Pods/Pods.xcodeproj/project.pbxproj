@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		002ADB656393C689CE5D411522512F5E /* Pods-CustomUploadButton_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 429030BF848730A206C49973BDFCA280 /* Pods-CustomUploadButton_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D647CA743A9A5596395576F14A0A7CA /* Pods-CustomUploadButton_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 607E4B42401B0DA9B121302C03306FF3 /* Pods-CustomUploadButton_Tests-dummy.m */; };
-		3D85B5E81DFFC5D00051DE89 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D85B5E71DFFC5D00051DE89 /* CircleView.swift */; };
 		53EB0EF8B57C7CBB62B529F545B65C42 /* Pods-CustomUploadButton_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0AAA39FEC4F8675B489A63512342229 /* Pods-CustomUploadButton_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54FB11E1215AA701E85C215BB7058FB2 /* Pods-CustomUploadButton_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 747DE5F3A45C38D7303EE01B59A4DE3E /* Pods-CustomUploadButton_Example-dummy.m */; };
+		59A2E1FF42663AD5CBA5051278011129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		793F2F7C73093A2E58D0B091F1E26DAF /* CustomUploadButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D6337295403972022EAF16F3EDB89 /* CustomUploadButton.bundle */; };
 		853EC818FDF4114E84124AC567BF2733 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		A876B7DD605C406BE37090D5EF83942A /* CustomUploadButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A570C5A93B00582355AD2970959F49C /* CustomUploadButton-dummy.m */; };
-		C67F9DF26C578214E29E19A7B7114B60 /* CustomUploadButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C61BC86EF1BE47230917405B65FFC7A1 /* CustomUploadButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D71E6F4D06C84C414CF39FEB3C65ADDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		DB85B5B2F4425E951E43A983F712260D /* CustomUploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981689E18DE8F2D6D71BC7F8523D7A52 /* CustomUploadButton.swift */; };
+		A8049EC601A2051FC5549CCE4C541A45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1421C021C86A8C7D1E64EA92256FA3A6 /* Images.xcassets */; };
+		B75A340A907495FA0796C813543D8583 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F393C3B73E9B23A61815A3F0092943 /* CircleView.swift */; };
+		BCCCE5AE1322048FB1FB12FE28675A5C /* CustomUploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B00EA229A6330CA19339EBC34C9286 /* CustomUploadButton.swift */; };
+		D4771D2E21ABFA1D1B9D5CFA7C5D026A /* CustomUploadButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D390B2F160879B48E297F1C40DF13B /* CustomUploadButton-dummy.m */; };
 		E04FE24340618FC031FFB828A04A532A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		EC2ABF7B29D2BF18956EE22438635714 /* CustomUploadButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 231F576B53AD1938143223928DAF551A /* CustomUploadButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,48 +27,66 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 222E88817C01253F724AC96282C18030;
+			remoteGlobalIDString = C6D461F984D91408AF8C964F0A48E369;
 			remoteInfo = CustomUploadButton;
+		};
+		E55575B06C8ED7DF87FA190CC4862591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC42BD4E08723B61AB7F09BCFAC486CA;
+			remoteInfo = "CustomUploadButton-CustomUploadButton";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08D390B2F160879B48E297F1C40DF13B /* CustomUploadButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomUploadButton-dummy.m"; sourceTree = "<group>"; };
 		0D919CE26B7E9257C19CD51823305BCE /* Pods-CustomUploadButton_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomUploadButton_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1421C021C86A8C7D1E64EA92256FA3A6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1801164133DA3BE530FF8F0543F2DA21 /* ResourceBundle-CustomUploadButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CustomUploadButton-Info.plist"; sourceTree = "<group>"; };
 		231D8F15589BEF62F54155883B175B06 /* Pods-CustomUploadButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomUploadButton_Example.release.xcconfig"; sourceTree = "<group>"; };
+		231F576B53AD1938143223928DAF551A /* CustomUploadButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomUploadButton-umbrella.h"; sourceTree = "<group>"; };
 		2AEC137E9AC0E75EAD42BC52DD55F9CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B80270598729C77588BDB81475DCA8E /* Pods-CustomUploadButton_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2DC7DCAF8D4D3CD6D902E1E6CF7372D0 /* Pods-CustomUploadButton_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomUploadButton_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3420BDB7D0A0A3B5BC64AEF2D80FAF2E /* Pods-CustomUploadButton_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CustomUploadButton_Tests.modulemap"; sourceTree = "<group>"; };
-		3A570C5A93B00582355AD2970959F49C /* CustomUploadButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomUploadButton-dummy.m"; sourceTree = "<group>"; };
+		2F5D6337295403972022EAF16F3EDB89 /* CustomUploadButton.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CustomUploadButton.bundle; path = CustomUploadButton.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3420BDB7D0A0A3B5BC64AEF2D80FAF2E /* Pods-CustomUploadButton_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CustomUploadButton_Tests.modulemap"; sourceTree = "<group>"; };
 		3B695ADCEC5D0FB643254DAEECC1A49B /* Pods-CustomUploadButton_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomUploadButton_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3BBC961641789DA0A4FBF03DFF4209D7 /* Pods-CustomUploadButton_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Tests-resources.sh"; sourceTree = "<group>"; };
-		3D85B5E71DFFC5D00051DE89 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		429030BF848730A206C49973BDFCA280 /* Pods-CustomUploadButton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomUploadButton_Example-umbrella.h"; sourceTree = "<group>"; };
+		4C1CF9180AA0BC817F1B659EA95B58A3 /* Pods_CustomUploadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomUploadButton_Tests.framework; path = "Pods-CustomUploadButton_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		528F7B5E89A468C7DB675E8F88FA398D /* Pods-CustomUploadButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomUploadButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		56F5E4DB9EE63B152E6900F995147660 /* Pods-CustomUploadButton_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomUploadButton_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5771EA8BD2755760BF34EF2BE465A1F4 /* CustomUploadButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomUploadButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607E4B42401B0DA9B121302C03306FF3 /* Pods-CustomUploadButton_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomUploadButton_Tests-dummy.m"; sourceTree = "<group>"; };
+		640F900AEC818C7D2CDED11FD02F7E95 /* CustomUploadButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CustomUploadButton.framework; path = CustomUploadButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		747DE5F3A45C38D7303EE01B59A4DE3E /* Pods-CustomUploadButton_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomUploadButton_Example-dummy.m"; sourceTree = "<group>"; };
+		86B00EA229A6330CA19339EBC34C9286 /* CustomUploadButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomUploadButton.swift; sourceTree = "<group>"; };
 		86C1EBAE74BFB21CCB9F443221C288E1 /* Pods-CustomUploadButton_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		884BC8C7E668C5BAEF80CC07916A6012 /* Pods-CustomUploadButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomUploadButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8B319A6F2470752DE6D02D8AED4F72BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93314C9369A44326730D6DCDB993CF1C /* Pods-CustomUploadButton_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomUploadButton_Example-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		975335215D1D3C6964AAD6B59C498B00 /* Pods_CustomUploadButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomUploadButton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		981689E18DE8F2D6D71BC7F8523D7A52 /* CustomUploadButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomUploadButton.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96FCE01C40ACC60009D865E12F6D1097 /* CustomUploadButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomUploadButton-prefix.pch"; sourceTree = "<group>"; };
 		9DD3E585190ED368B77E66163E67479B /* Pods-CustomUploadButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomUploadButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		ACD306025B7040EC7C28535385E9FBA0 /* CustomUploadButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomUploadButton-prefix.pch"; sourceTree = "<group>"; };
-		B6009A9673E76081159B07327E07BAC1 /* CustomUploadButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomUploadButton.xcconfig; sourceTree = "<group>"; };
-		C17638492D7C89092AD83534A13C3E7E /* Pods_CustomUploadButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomUploadButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C61BC86EF1BE47230917405B65FFC7A1 /* CustomUploadButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CustomUploadButton-umbrella.h"; sourceTree = "<group>"; };
-		C8A8063487390408CC7FF01DD01656D8 /* CustomUploadButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CustomUploadButton.modulemap; sourceTree = "<group>"; };
+		B25ADD4843C2479979B13B6D19E95258 /* CustomUploadButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CustomUploadButton.modulemap; sourceTree = "<group>"; };
+		C9F393C3B73E9B23A61815A3F0092943 /* CircleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CCD4C6EC042F078704B3569E01F6E3A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5BA6ED43D107B40CB6CBC61A3C4F828 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0AAA39FEC4F8675B489A63512342229 /* Pods-CustomUploadButton_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomUploadButton_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F629B48ED3147D841314B5A245930517 /* Pods-CustomUploadButton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CustomUploadButton_Example.modulemap"; sourceTree = "<group>"; };
+		E7D3D1D5FC1357C449D679B89B886497 /* Pods_CustomUploadButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomUploadButton_Example.framework; path = "Pods-CustomUploadButton_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E0D88716C857F7EF10065218A2D5B2 /* CustomUploadButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomUploadButton.xcconfig; sourceTree = "<group>"; };
+		F629B48ED3147D841314B5A245930517 /* Pods-CustomUploadButton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CustomUploadButton_Example.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2BEA3D19D7120B6A33CFDEA4DEAD044F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A2E1FF42663AD5CBA5051278011129 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		58F1F475845693D64620A5BD74937399 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,42 +103,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAD771F05C05A88EB0457E0E8C7BD55B /* Frameworks */ = {
+		6CE940C5222275F3F9F12BEB5FC79CC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D71E6F4D06C84C414CF39FEB3C65ADDA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01065A17C86B12B1474A990A7896B4BF /* CustomUploadButton */ = {
+		21F359C91884090E4C47955746AB36FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16F6FBAC9874071020B0E34C79EC8A22 /* Classes */,
+				2F5D6337295403972022EAF16F3EDB89 /* CustomUploadButton.bundle */,
+				640F900AEC818C7D2CDED11FD02F7E95 /* CustomUploadButton.framework */,
+				E7D3D1D5FC1357C449D679B89B886497 /* Pods_CustomUploadButton_Example.framework */,
+				4C1CF9180AA0BC817F1B659EA95B58A3 /* Pods_CustomUploadButton_Tests.framework */,
 			);
-			path = CustomUploadButton;
-			sourceTree = "<group>";
-		};
-		0D551131C63C0DA2AB04A855B836A9EC /* CustomUploadButton */ = {
-			isa = PBXGroup;
-			children = (
-				01065A17C86B12B1474A990A7896B4BF /* CustomUploadButton */,
-				7EEBA8E5DA56EEB72342F969BFCA7C07 /* Support Files */,
-			);
-			name = CustomUploadButton;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		16F6FBAC9874071020B0E34C79EC8A22 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				981689E18DE8F2D6D71BC7F8523D7A52 /* CustomUploadButton.swift */,
-				3D85B5E71DFFC5D00051DE89 /* CircleView.swift */,
-			);
-			path = Classes;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		2C927F4D8A82F9D6953EFA8348F3E9EF /* Targets Support Files */ = {
@@ -148,6 +151,24 @@
 			path = "Target Support Files/Pods-CustomUploadButton_Tests";
 			sourceTree = "<group>";
 		};
+		43C5B694C2D1D810FB86E219E67A12AB /* CustomUploadButton */ = {
+			isa = PBXGroup;
+			children = (
+				F9416962F4BB9B736CDCDF4E3B77FB0A /* Classes */,
+			);
+			name = CustomUploadButton;
+			path = CustomUploadButton;
+			sourceTree = "<group>";
+		};
+		44CEF418BFDBF54EF73FE0DF23F45E26 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1421C021C86A8C7D1E64EA92256FA3A6 /* Images.xcassets */,
+			);
+			name = Assets;
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		50CD254DAF2856536520C37FBACBCB3A /* Pods-CustomUploadButton_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +187,29 @@
 			path = "Target Support Files/Pods-CustomUploadButton_Example";
 			sourceTree = "<group>";
 		};
+		5321DE46FE0D7A12546AD81F713437FD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B25ADD4843C2479979B13B6D19E95258 /* CustomUploadButton.modulemap */,
+				E8E0D88716C857F7EF10065218A2D5B2 /* CustomUploadButton.xcconfig */,
+				08D390B2F160879B48E297F1C40DF13B /* CustomUploadButton-dummy.m */,
+				96FCE01C40ACC60009D865E12F6D1097 /* CustomUploadButton-prefix.pch */,
+				231F576B53AD1938143223928DAF551A /* CustomUploadButton-umbrella.h */,
+				8B319A6F2470752DE6D02D8AED4F72BB /* Info.plist */,
+				1801164133DA3BE530FF8F0543F2DA21 /* ResourceBundle-CustomUploadButton-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CustomUploadButton";
+			sourceTree = "<group>";
+		};
+		558ED59C58FA8F8F06FB8FE842B02D19 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA05DC2E8813797309DE39C9E387C22E /* CustomUploadButton */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,33 +222,28 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				A5634D47AB6CCB36086D210786C88EF3 /* Development Pods */,
+				558ED59C58FA8F8F06FB8FE842B02D19 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				D5490FB95A9D6451F5EECD8AB2486868 /* Products */,
+				21F359C91884090E4C47955746AB36FD /* Products */,
 				2C927F4D8A82F9D6953EFA8348F3E9EF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7EEBA8E5DA56EEB72342F969BFCA7C07 /* Support Files */ = {
+		947EC9686A7CA530C2410A7FFFBBDDD5 /* CustomUploadButton */ = {
 			isa = PBXGroup;
 			children = (
-				C8A8063487390408CC7FF01DD01656D8 /* CustomUploadButton.modulemap */,
-				B6009A9673E76081159B07327E07BAC1 /* CustomUploadButton.xcconfig */,
-				3A570C5A93B00582355AD2970959F49C /* CustomUploadButton-dummy.m */,
-				ACD306025B7040EC7C28535385E9FBA0 /* CustomUploadButton-prefix.pch */,
-				C61BC86EF1BE47230917405B65FFC7A1 /* CustomUploadButton-umbrella.h */,
-				CCD4C6EC042F078704B3569E01F6E3A9 /* Info.plist */,
+				44CEF418BFDBF54EF73FE0DF23F45E26 /* Assets */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CustomUploadButton";
+			name = CustomUploadButton;
+			path = CustomUploadButton;
 			sourceTree = "<group>";
 		};
-		A5634D47AB6CCB36086D210786C88EF3 /* Development Pods */ = {
+		ABD2AFBD8D0BEABFF884D00235046533 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0D551131C63C0DA2AB04A855B836A9EC /* CustomUploadButton */,
+				947EC9686A7CA530C2410A7FFFBBDDD5 /* CustomUploadButton */,
 			);
-			name = "Development Pods";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -215,14 +254,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D5490FB95A9D6451F5EECD8AB2486868 /* Products */ = {
+		EA05DC2E8813797309DE39C9E387C22E /* CustomUploadButton */ = {
 			isa = PBXGroup;
 			children = (
-				5771EA8BD2755760BF34EF2BE465A1F4 /* CustomUploadButton.framework */,
-				975335215D1D3C6964AAD6B59C498B00 /* Pods_CustomUploadButton_Example.framework */,
-				C17638492D7C89092AD83534A13C3E7E /* Pods_CustomUploadButton_Tests.framework */,
+				43C5B694C2D1D810FB86E219E67A12AB /* CustomUploadButton */,
+				ABD2AFBD8D0BEABFF884D00235046533 /* Resources */,
+				5321DE46FE0D7A12546AD81F713437FD /* Support Files */,
 			);
-			name = Products;
+			name = CustomUploadButton;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		F9416962F4BB9B736CDCDF4E3B77FB0A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C9F393C3B73E9B23A61815A3F0092943 /* CircleView.swift */,
+				86B00EA229A6330CA19339EBC34C9286 /* CustomUploadButton.swift */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +286,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A01C113B04A8511DA612513D39322D74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2ABF7B29D2BF18956EE22438635714 /* CustomUploadButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF84A50440318F131137427FF323463A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,34 +302,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD3FFF141082142FA373B38C1A8AC8DB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C67F9DF26C578214E29E19A7B7114B60 /* CustomUploadButton-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		222E88817C01253F724AC96282C18030 /* CustomUploadButton */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 582C029B677B62C91BA6EF28E7DC8B72 /* Build configuration list for PBXNativeTarget "CustomUploadButton" */;
-			buildPhases = (
-				AFD9EB3285CEF07349D95629BCE0E5E0 /* Sources */,
-				DAD771F05C05A88EB0457E0E8C7BD55B /* Frameworks */,
-				DD3FFF141082142FA373B38C1A8AC8DB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CustomUploadButton;
-			productName = CustomUploadButton;
-			productReference = 5771EA8BD2755760BF34EF2BE465A1F4 /* CustomUploadButton.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		BCCA392A3E0C73BAC9F51D6D95BEA74D /* Pods-CustomUploadButton_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B866387929F791216B3D3E546DB7191 /* Build configuration list for PBXNativeTarget "Pods-CustomUploadButton_Example" */;
@@ -287,7 +320,26 @@
 			);
 			name = "Pods-CustomUploadButton_Example";
 			productName = "Pods-CustomUploadButton_Example";
-			productReference = 975335215D1D3C6964AAD6B59C498B00 /* Pods_CustomUploadButton_Example.framework */;
+			productReference = E7D3D1D5FC1357C449D679B89B886497 /* Pods_CustomUploadButton_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6D461F984D91408AF8C964F0A48E369 /* CustomUploadButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9430473E9216EACBB7EDA75622520792 /* Build configuration list for PBXNativeTarget "CustomUploadButton" */;
+			buildPhases = (
+				2DE451D69645E2B8971E2A64C35A9E67 /* Sources */,
+				2BEA3D19D7120B6A33CFDEA4DEAD044F /* Frameworks */,
+				1F999393A3AFF1BE6B9A7B60BED9021C /* Resources */,
+				A01C113B04A8511DA612513D39322D74 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07333B7D556C3DA2757F2DF461D8D989 /* PBXTargetDependency */,
+			);
+			name = CustomUploadButton;
+			productName = CustomUploadButton;
+			productReference = 640F900AEC818C7D2CDED11FD02F7E95 /* CustomUploadButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E33698EE096CD3DE90EDFF6FB1187CA5 /* Pods-CustomUploadButton_Tests */ = {
@@ -304,8 +356,25 @@
 			);
 			name = "Pods-CustomUploadButton_Tests";
 			productName = "Pods-CustomUploadButton_Tests";
-			productReference = C17638492D7C89092AD83534A13C3E7E /* Pods_CustomUploadButton_Tests.framework */;
+			productReference = 4C1CF9180AA0BC817F1B659EA95B58A3 /* Pods_CustomUploadButton_Tests.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		FC42BD4E08723B61AB7F09BCFAC486CA /* CustomUploadButton-CustomUploadButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35B3EE89A69FB04C8D53D045C6ADD03F /* Build configuration list for PBXNativeTarget "CustomUploadButton-CustomUploadButton" */;
+			buildPhases = (
+				A3C408500569AFE1C8928FFD56687A87 /* Sources */,
+				6CE940C5222275F3F9F12BEB5FC79CC2 /* Frameworks */,
+				D1C966991383B3ACCD5B3E7BF49B351B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CustomUploadButton-CustomUploadButton";
+			productName = "CustomUploadButton-CustomUploadButton";
+			productReference = 2F5D6337295403972022EAF16F3EDB89 /* CustomUploadButton.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -324,18 +393,48 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D5490FB95A9D6451F5EECD8AB2486868 /* Products */;
+			productRefGroup = 21F359C91884090E4C47955746AB36FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				222E88817C01253F724AC96282C18030 /* CustomUploadButton */,
+				C6D461F984D91408AF8C964F0A48E369 /* CustomUploadButton */,
+				FC42BD4E08723B61AB7F09BCFAC486CA /* CustomUploadButton-CustomUploadButton */,
 				BCCA392A3E0C73BAC9F51D6D95BEA74D /* Pods-CustomUploadButton_Example */,
 				E33698EE096CD3DE90EDFF6FB1187CA5 /* Pods-CustomUploadButton_Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		1F999393A3AFF1BE6B9A7B60BED9021C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793F2F7C73093A2E58D0B091F1E26DAF /* CustomUploadButton.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1C966991383B3ACCD5B3E7BF49B351B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8049EC601A2051FC5549CCE4C541A45 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		2DE451D69645E2B8971E2A64C35A9E67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B75A340A907495FA0796C813543D8583 /* CircleView.swift in Sources */,
+				D4771D2E21ABFA1D1B9D5CFA7C5D026A /* CustomUploadButton-dummy.m in Sources */,
+				BCCCE5AE1322048FB1FB12FE28675A5C /* CustomUploadButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89AC13804C5A83BBC3EC3813E31C53C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,13 +443,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFD9EB3285CEF07349D95629BCE0E5E0 /* Sources */ = {
+		A3C408500569AFE1C8928FFD56687A87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D85B5E81DFFC5D00051DE89 /* CircleView.swift in Sources */,
-				A876B7DD605C406BE37090D5EF83942A /* CustomUploadButton-dummy.m in Sources */,
-				DB85B5B2F4425E951E43A983F712260D /* CustomUploadButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,24 +461,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		07333B7D556C3DA2757F2DF461D8D989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CustomUploadButton-CustomUploadButton";
+			target = FC42BD4E08723B61AB7F09BCFAC486CA /* CustomUploadButton-CustomUploadButton */;
+			targetProxy = E55575B06C8ED7DF87FA190CC4862591 /* PBXContainerItemProxy */;
+		};
 		3507EFC853B07C0A38D2447784A89297 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CustomUploadButton;
-			target = 222E88817C01253F724AC96282C18030 /* CustomUploadButton */;
+			target = C6D461F984D91408AF8C964F0A48E369 /* CustomUploadButton */;
 			targetProxy = 198E882EA937F7DA1D6DA74A46D87137 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04AAD4E69A9B657EDB906825F45101F0 /* Debug */ = {
+		102C0E36662F61F241233B2AB57A3ACD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6009A9673E76081159B07327E07BAC1 /* CustomUploadButton.xcconfig */;
+			baseConfigurationReference = E8E0D88716C857F7EF10065218A2D5B2 /* CustomUploadButton.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -395,17 +497,33 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CustomUploadButton/CustomUploadButton.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = CustomUploadButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
+		};
+		2D4D2921D5FEC47362734B736FA9B048 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E0D88716C857F7EF10065218A2D5B2 /* CustomUploadButton.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CustomUploadButton";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/CustomUploadButton/ResourceBundle-CustomUploadButton-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = CustomUploadButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		35B6FCEA0F4E66C057A4F7CF5A6F269C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -476,6 +594,23 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		5AA8AE8ED3D38FAD7D958D6D0913DF62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E0D88716C857F7EF10065218A2D5B2 /* CustomUploadButton.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CustomUploadButton";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/CustomUploadButton/ResourceBundle-CustomUploadButton-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = CustomUploadButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		7855FD7E4ED689D6FC2474F355C77AE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -632,15 +767,15 @@
 			};
 			name = Debug;
 		};
-		DA431A550E713ACA55ADB0AE0B375723 /* Release */ = {
+		D99F4B8458CFB31E7582D4309EC370A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6009A9673E76081159B07327E07BAC1 /* CustomUploadButton.xcconfig */;
+			baseConfigurationReference = E8E0D88716C857F7EF10065218A2D5B2 /* CustomUploadButton.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -653,16 +788,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CustomUploadButton/CustomUploadButton.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = CustomUploadButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -676,11 +812,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		582C029B677B62C91BA6EF28E7DC8B72 /* Build configuration list for PBXNativeTarget "CustomUploadButton" */ = {
+		35B3EE89A69FB04C8D53D045C6ADD03F /* Build configuration list for PBXNativeTarget "CustomUploadButton-CustomUploadButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04AAD4E69A9B657EDB906825F45101F0 /* Debug */,
-				DA431A550E713ACA55ADB0AE0B375723 /* Release */,
+				5AA8AE8ED3D38FAD7D958D6D0913DF62 /* Debug */,
+				2D4D2921D5FEC47362734B736FA9B048 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -690,6 +826,15 @@
 			buildConfigurations = (
 				7855FD7E4ED689D6FC2474F355C77AE9 /* Debug */,
 				35B6FCEA0F4E66C057A4F7CF5A6F269C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9430473E9216EACBB7EDA75622520792 /* Build configuration list for PBXNativeTarget "CustomUploadButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D99F4B8458CFB31E7582D4309EC370A8 /* Debug */,
+				102C0E36662F61F241233B2AB57A3ACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
