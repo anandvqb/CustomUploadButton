@@ -11,26 +11,23 @@ import CustomUploadButton
 
 class ViewController: UIViewController, CustomUploadButtonActionDelegate {
     
-    let buttonWidth:CGFloat = 100
-    let buttonHeight:CGFloat = 60
-    var customUploadButton: CustomUploadButton!
+    @IBOutlet var uploadButton: CustomUploadButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewFrame = view.frame
+        uploadButton.delegate = self
         
-        customUploadButton = CustomUploadButton(frame: CGRect(x:(viewFrame.width - buttonWidth)/2, y:(viewFrame.height - buttonHeight)/2, width:buttonWidth, height:buttonHeight))
-        customUploadButton.delegate = self
-        customUploadButton.setUpButton(title: "Upload")
-        
-        view.addSubview(customUploadButton)
+        view.addSubview(uploadButton)
     }
     
-    public func buttonAction() {
+    public func buttonAction(sender: CustomUploadButton) {
         //Do stuff on button action here
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.customUploadButton.stopAnimation()
+        
+        if sender == uploadButton {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.uploadButton.stopAnimation()
+            }
         }
     }
     

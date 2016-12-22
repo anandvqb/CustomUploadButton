@@ -9,16 +9,20 @@
 import Foundation
 
 public protocol CustomUploadButtonActionDelegate: class {
-    func buttonAction()
+    func buttonAction(sender:CustomUploadButton)
+}
+
+private struct Constants {
+    
+    static let title = String("Upload")
+    static let bgColor = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 1.0)
+    static let bgColorWithAlpha = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 0.1)
+    static let bgColorForSuccessView = UIColor(red: 102/255.0, green: 158/255.0, blue: 99/255.0, alpha: 1.0)
 }
 
 public class CustomUploadButton : UIView {
     
     public var delegate: CustomUploadButtonActionDelegate?
-    
-    let bgColor = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 1.0)
-    let bgColorWithAlpha = UIColor(red: 96/255.0, green: 124/255.0, blue: 157/255.0, alpha: 0.1)
-    let bgColorForSuccessView = UIColor(red: 102/255.0, green: 158/255.0, blue: 99/255.0, alpha: 1.0)
     
     var angle = CGFloat(M_PI_4)
     
@@ -27,22 +31,34 @@ public class CustomUploadButton : UIView {
     var baseCircleView: UIView!
     var outerCircleView: UIView!
     var innerCircleView: UIView!
-    var animatingCircleView: UIView!
+    var expandingCircleView: UIView!
     var successCircleView: UIView!
     var checkmarkImageView: UIImageView!
     
     var breakLoop = false
     
-    public func setUpButton(title:String) {
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setUpButton()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        setUpButton()
+    }
+    
+    public func setUpButton() {
         baseRectangleView = UIControl(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
-        baseRectangleView.backgroundColor = bgColor
+        baseRectangleView.backgroundColor = Constants.bgColor
         baseRectangleView.layer.cornerRadius = 25.0
         baseRectangleView.clipsToBounds = true
         
         titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
         titleLabel?.font = UIFont.systemFont(ofSize: 20)
         titleLabel.textColor = UIColor.white
-        titleLabel.text = title
+        titleLabel.text = Constants.title
         titleLabel.textAlignment = .center
         baseRectangleView.addSubview(titleLabel)
         
@@ -77,19 +93,19 @@ public class CustomUploadButton : UIView {
         
         baseCircleView.layer.cornerRadius = baseCircleView.frame.size.width/2
         baseCircleView.clipsToBounds = true
-        baseCircleView.backgroundColor = bgColor
+        baseCircleView.backgroundColor = Constants.bgColor
         
-        animatingCircleView.layer.cornerRadius = animatingCircleView.frame.size.width/2
-        animatingCircleView.clipsToBounds = true
-        animatingCircleView.backgroundColor = bgColorWithAlpha
+        expandingCircleView.layer.cornerRadius = expandingCircleView.frame.size.width/2
+        expandingCircleView.clipsToBounds = true
+        expandingCircleView.backgroundColor = Constants.bgColorWithAlpha
         
         successCircleView.layer.cornerRadius = successCircleView.frame.size.width/2
         successCircleView.clipsToBounds = true
-        successCircleView.backgroundColor = bgColorForSuccessView
+        successCircleView.backgroundColor = Constants.bgColorForSuccessView
         
         self.animateRectangle()
         
-        self.delegate?.buttonAction()
+        self.delegate?.buttonAction(sender: self)
     }
     
     func animateRectangle() {
@@ -122,11 +138,11 @@ public class CustomUploadButton : UIView {
                     subview.removeFromSuperview()
                 }
                 
-                self.addSubview(self.animatingCircleView)
+                self.addSubview(self.expandingCircleView)
                 UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                    self.animatingCircleView.transform = CGAffineTransform(scaleX: 5, y: 5)
+                    self.expandingCircleView.transform = CGAffineTransform(scaleX: 5, y: 5)
                 }) { (finished) -> Void in
-                    self.animatingCircleView.removeFromSuperview()
+                    self.expandingCircleView.removeFromSuperview()
                     self.addSubview(self.successCircleView)
                     self.addSubview(self.checkmarkImageView)
                     
