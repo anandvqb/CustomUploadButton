@@ -26,22 +26,22 @@ public class CustomUploadButton : UIView {
     
     public var delegate: CustomUploadButtonActionDelegate?
     
-    var angle = CGFloat(M_PI_4)
+    private var angle = CGFloat(M_PI_4)
     
-    var titleLabel: UILabel!
-    var uploadImageView: UIImageView!
-    var baseRectangleView: UIControl!
+    private var titleLabel: UILabel!
+    private var uploadImageView: UIImageView!
+    private var baseRectangleView: UIControl!
     
-    var baseCircleView: UIView!
-    var outerCircleView: UIView!
-    var innerCircleView: UIView!
-    var expandingCircleView: UIView!
-    var successCircleView: UIView!
-    var checkmarkImageView: UIImageView!
+    private var baseCircleView: UIView!
+    private var outerCircleView: UIView!
+    private var innerCircleView: UIView!
+    private var expandingCircleView: UIView!
+    private var successCircleView: UIView!
+    private var checkmarkImageView: UIImageView!
     
-    var baseCircleDimension: CGFloat!
+    private var baseCircleDimension: CGFloat!
     
-    var breakLoop = false
+    private var breakLoop = false
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,7 +55,7 @@ public class CustomUploadButton : UIView {
         setUpButton()
     }
     
-    public func setUpButton() {
+    private func setUpButton() {
         baseRectangleView = UIControl(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         baseRectangleView.backgroundColor = Constants.bgColor
         baseRectangleView.layer.cornerRadius = self.frame.height/3
@@ -131,7 +131,7 @@ public class CustomUploadButton : UIView {
         self.delegate?.buttonAction(sender: self)
     }
     
-    func animateRectangle() {
+    private func animateRectangle() {
         let buttonFrame = self.frame
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -150,7 +150,7 @@ public class CustomUploadButton : UIView {
         })
     }
     
-    func rotateCircle() {
+    private func rotateCircle() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
             self.innerCircleView.transform = CGAffineTransform(rotationAngle: self.angle)
             self.outerCircleView.transform = CGAffineTransform(rotationAngle: -self.angle)
@@ -196,5 +196,15 @@ public class CustomUploadButton : UIView {
     
     public func stopAnimation() {
         self.breakLoop = true
+    }
+    
+    public func disableButton() {
+        self.alpha = 0.5
+        self.isUserInteractionEnabled = false
+    }
+    
+    public func enableButton() {
+        self.alpha = 1.0
+        self.isUserInteractionEnabled = true
     }
 }

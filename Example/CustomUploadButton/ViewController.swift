@@ -26,7 +26,11 @@ class ViewController: UIViewController, CustomUploadButtonActionDelegate {
         
         if sender == uploadButton {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.uploadButton.stopAnimation()
+                sender.stopAnimation()
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                sender.disableButton()
             }
         }
     }
