@@ -11,7 +11,7 @@ import CustomUploadButton
 
 class ViewController: UIViewController, CustomUploadButtonActionDelegate {
     
-    @IBOutlet var uploadButton: CustomUploadButton!
+    @IBOutlet weak var uploadButton: CustomUploadButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

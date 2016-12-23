@@ -24,7 +24,7 @@ private struct Constants {
 
 public class CustomUploadButton : UIView {
     
-    public var delegate: CustomUploadButtonActionDelegate?
+    public weak var delegate: CustomUploadButtonActionDelegate?
     
     private var angle = CGFloat(M_PI_4)
     
@@ -61,13 +61,6 @@ public class CustomUploadButton : UIView {
         baseRectangleView.layer.cornerRadius = self.frame.height/3
         baseRectangleView.clipsToBounds = true
         
-        titleLabel = UILabel(frame: CGRect(x: 20, y: 0, width: (self.frame.width - 40), height: self.frame.height))
-        titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        titleLabel.textColor = UIColor.white
-        titleLabel.text = Constants.title
-        titleLabel.textAlignment = .left
-        baseRectangleView.addSubview(titleLabel)
-        
         var uploadImage = UIImage()
         let podBundle = Bundle(for: CustomUploadButton.self)
         
@@ -79,6 +72,15 @@ public class CustomUploadButton : UIView {
         uploadImageView = UIImageView(image: uploadImage)
         uploadImageView.frame.origin = CGPoint(x: (self.frame.width - uploadImageView.frame.size.width - 20), y: (self.frame.height - uploadImageView.frame.size.height)/2)
         baseRectangleView.addSubview(uploadImageView)
+        
+        titleLabel = UILabel(frame: CGRect(x: 20, y: 0, width: (self.frame.width - uploadImage.size.width - 50), height: self.frame.height))
+        titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        titleLabel.textColor = UIColor.white
+        titleLabel.text = Constants.title
+        titleLabel.textAlignment = .left
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.baselineAdjustment = .alignCenters
+        baseRectangleView.addSubview(titleLabel)
         
         baseRectangleView.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
         self.addSubview(baseRectangleView)
@@ -131,6 +133,7 @@ public class CustomUploadButton : UIView {
         self.delegate?.buttonAction(sender: self)
     }
     
+    //Shrinking animation on the base rectangle view
     private func animateRectangle() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.addSubview(self.baseCircleView)
@@ -148,14 +151,14 @@ public class CustomUploadButton : UIView {
         })
     }
     
+    //Animating the concentric circles
     private func rotateCircle() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
             self.innerCircleView.transform = CGAffineTransform(rotationAngle: self.angle)
             self.outerCircleView.transform = CGAffineTransform(rotationAngle: -self.angle)
         }, completion: { (value: Bool) in
             if self.breakLoop {
-                let subViews = self.subviews
-                for subview in subViews {
+                for subview in self.subviews {
                     subview.removeFromSuperview()
                 }
                 
@@ -168,8 +171,7 @@ public class CustomUploadButton : UIView {
                     self.addSubview(self.checkmarkImageView)
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        let subViews = self.subviews
-                        for subview in subViews {
+                        for subview in self.subviews {
                             subview.removeFromSuperview()
                         }
                         
