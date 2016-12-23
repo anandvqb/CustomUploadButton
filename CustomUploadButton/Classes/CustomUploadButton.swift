@@ -132,8 +132,6 @@ public class CustomUploadButton : UIView {
     }
     
     private func animateRectangle() {
-        let buttonFrame = self.frame
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.addSubview(self.baseCircleView)
             self.addSubview(self.outerCircleView)
