@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CustomUploadButton'
-  s.version          = '0.2.0'
+  s.version          = '1.0.0'
   s.summary          = 'Custom upload button based on design from UIMovement.'
 
   s.description      = 'This is a cocoapod for creating a custom upload button based on a design from UIMovement (https://uimovement.com/ui/2472/upload-button/).'

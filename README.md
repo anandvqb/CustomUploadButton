@@ -7,9 +7,9 @@
 ## Overview
 This is a custom upload button that shows animation during the upload action. The user can stop the animation when the upload process is complete. There is also option for disabling/enabling the button.
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<p align="center">
+<img src="http://i.imgur.com/mTBHWEg.gif" alt="CustomUploadButton" />
+</p>
 
 ## Requirements
 * Xcode 8.1+
@@ -18,12 +18,40 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-CustomUploadButton is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods:
 
-```ruby
-pod "CustomUploadButton"
+CustomUploadButton is available through [CocoaPods](http://cocoapods.org). [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
 ```
+
+To integrate `CustomUploadButton` into your Xcode project using CocoaPods, specify it in your Podfile:
+```ruby
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+pod ’CustomUploadButton’, ‘1.0.0'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+### Manually:
+
+* Download CustomUploadButton.
+* Drag and drop CustomUploadButton directory to your project
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ##Usage
 
