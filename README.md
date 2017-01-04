@@ -12,7 +12,9 @@ This is a custom upload button that shows animation during the upload action. Th
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-* iOS 8.0
+* Xcode 8.1+
+* iOS 8.0+
+* Swift 3.0+
 
 ## Installation
 
@@ -21,6 +23,37 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "CustomUploadButton"
+```
+
+##Usage
+
+Here is how you can use `CustomUploadButton`. 
+
+Import CustomUploadButton to your viewcontroller,
+
+```swift
+import CustomUploadButton
+```
+
+Then create an instance of the CustomUploadButton and set the delegate as follows:
+
+```swift
+@IBOutlet weak var uploadButton: CustomUploadButton!
+
+uploadButton.delegate = self
+```
+
+Now, implement the `CustomUploadButtonActionDelegate` function where you can stop the animation when your task is complete:
+
+```swift
+public func buttonAction(sender: CustomUploadButton) {
+    
+    //Your task here
+    
+    if sender == uploadButton {
+        sender.stopAnimation()
+    }
+}
 ```
 
 ## Author
